@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Registration Form</title>
+</head>
+<body>
+    <h1>Employee Registration Form</h1>
+    <form>
+        <label>
+            <input type="radio" name="title" value="Mr."> Mr.
+            <input type="radio" name="title" value="Mrs."> Mrs.
+            <input type="radio" name="title" value="Ms."> Ms.
+        </label>
+        <br><br>
+        First Name:    <input type="text" placeholder="First Name"><br><br>
+        Last Name:     <input type="text" placeholder="Last Name"><br><br>
+        Mail Address1: <input type="text"><br><br>
+        Mail Address2: <input type="text"><br><br>
+        City:          <input type="text"><br><br>
+        State: <select>
+            <option selected>Gujarat</option>
+            <!-- Add more options for states -->
+        </select><br><br>
+        Zip: <input type="text"><br><br>
+        Upload Photo: <input type="file">No file selected.<br><br>
+        E-Mail: <input type="email"><br><br>
+        Mobile: <input type="text" value="+91"><br><br>
+        Languages known:
+        <br>
+        <input type="checkbox" checked> Gujarati<br>
+        <input type="checkbox" checked> Hindi<br>
+        <input type="checkbox" checked> English<br>
+        <input type="checkbox"> Marathi<br><br>
+        Additional Information: <textarea rows="4" placeholder="optional"></textarea><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
