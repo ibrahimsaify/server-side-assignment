@@ -1,9 +1,15 @@
-function findAllIndices(str, word) {
-	const indices = [];
-	let index = str.indexOf(word);
-	while (index !== -1) {
-		indices.push(index);
-		index = str.indexOf(word, index + 1);
+function findAllIndexes(str, word) {
+	let indexes = [];
+	let index = -1;
+    
+	while ((index = str.indexOf(word, index + 1)) !== -1) {
+    	indexes.push(index);
 	}
-	return indices;
+    
+	return indexes;
 }
+
+let string = "hello world hello";
+let word = "world";
+let positions = findAllIndexes(string, word);
+console.log("The word '" + word + "' appears at positions: " + positions.join(", "));
