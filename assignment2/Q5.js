@@ -1,48 +1,42 @@
-function heapSort(arr) {
-    const n = arr.length;
-  
-    // Build max heap
-    for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
-      heapify(arr, n, i);
-    }
-  
-    // Extract elements from heap one by one
-    for (let i = n - 1; i > 0; i--) {
-      // Move current root to end
-      [arr[0], arr[i]] = [arr[i], arr[0]];
-  
-      // Call heapify on the reduced heap
-      heapify(arr, i, 0);
-    }
-  
-    return arr;
-  }
-  
-  function heapify(arr, n, i) {
-    let largest = i; // Initialize largest as root
-    const left = 2 * i + 1; // Left child index
-    const right = 2 * i + 2; // Right child index
-  
-    // If left child is larger than root
-    if (left < n && arr[left] > arr[largest]) {
-      largest = left;
-    }
-  
-    // If right child is larger than root
-    if (right < n && arr[right] > arr[largest]) {
-      largest = right;
-    }
-  
-    // If largest is not root
-    if (largest !== i) {
-      [arr[i], arr[largest]] = [arr[largest], arr[i]]; // Swap
-  
-      // Recursively heapify the affected sub-tree
-      heapify(arr, n, largest);
-    }
-  }
-  
-  // Example usage
-  const arr = [5, 3, 8, 1, 9, 2];
-  const sortedArr = heapSort(arr);
-  console.log(sortedArr); // Output: [1, 2, 3, 5, 8, 9]
+function customSort(arr) {
+	var N = arr.length;
+
+	for (var i = Math.floor(N / 2) - 1; i >= 0; i--)
+    	customHeapify(arr, N, i);
+
+	for (var i = N - 1; i > 0; i--) {
+    	var temp = arr[0];
+    	arr[0] = arr[i];
+    	arr[i] = temp;
+    	customHeapify(arr, i, 0);
+	}
+}
+
+function customHeapify(arr, N, i) {
+	var largest = i;
+	var l = 2 * i + 1;
+	var r = 2 * i + 2;
+
+	if (l < N && arr[l] > arr[largest])
+    	largest = l;
+
+	if (r < N && arr[r] > arr[largest])
+    	largest = r;
+
+	if (largest != i) {
+    	var swap = arr[i];
+    	arr[i] = arr[largest];
+    	arr[largest] = swap;
+    	customHeapify(arr, N, largest);
+	}
+}
+
+function customPrintArray(arr) {
+	var N = arr.length;
+	for (var i = 0; i < N; ++i)
+    	console.log(arr[i]);
+}
+
+var originalArr = [12, 11, 13, 5, 6, 7];
+customSort(originalArr);
+console.log("Sorted array:" + originalArr);
