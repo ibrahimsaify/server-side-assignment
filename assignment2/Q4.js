@@ -1,48 +1,22 @@
-function heapSort(arr) {
-	const n = arr.length;
-
-	// Build max heap
-	for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
-		heapify(arr, n, i);
+function merge_Arrays(left_sub_array, right_sub_array) {
+	let array = []
+	while (left_sub_array.length && right_sub_array.length) {
+	   if (left_sub_array[0] < right_sub_array[0]) {
+		  array.push(left_sub_array.shift())
+	   } else {
+		  array.push(right_sub_array.shift())
+	   }
 	}
-
-	// Extract elements from heap one by one
-	for (let i = n - 1; i > 0; i--) {
-		// Move current root to end
-		[arr[0], arr[i]] = [arr[i], arr[0]];
-
-		// Call heapify on the reduced heap
-		heapify(arr, i, 0);
+	return [ ...array, ...left_sub_array, ...right_sub_array ]
+ }
+ function merge_sort(unsorted_Array) {
+	const middle_index = unsorted_Array.length / 2
+	if(unsorted_Array.length < 2) {
+	   return unsorted_Array
 	}
-
-	return arr;
-}
-
-function heapify(arr, n, i) {
-	let largest = i; // Initialize largest as root
-	const left = 2 * i + 1; // Left child index
-	const right = 2 * i + 2; // Right child index
-
-	// If left child is larger than root
-	if (left < n && arr[left] > arr[largest]) {
-		largest = left;
-	}
-
-	// If right child is larger than root
-	if (right < n && arr[right] > arr[largest]) {
-		largest = right;
-	}
-
-	// If largest is not root
-	if (largest !== i) {
-		[arr[i], arr[largest]] = [arr[largest], arr[i]]; // Swap
-
-		// Recursively heapify the affected sub-tree
-		heapify(arr, n, largest);
-	}
-}
-
-// Example usage
-const arr = [5, 3, 8, 1, 9, 2];
-const sortedArr = heapSort(arr);
-console.log(sortedArr); // Output: [1, 2, 3, 5, 8, 9]
+	const left_sub_array = unsorted_Array.splice(0, middle_index)
+	return merge_Arrays(merge_sort(left_sub_array),merge_sort(unsorted_Array))
+ }
+ unsorted_Array = [39, 28, 44, 4, 10, 83, 11];
+ console.log("The sorted array will be: ",merge_sort(unsorted_Array));
+ 
