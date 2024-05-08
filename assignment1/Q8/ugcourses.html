@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>UG courses @IETDAVV</title>
+		<link rel="icon" href="images/Logo.png" type="image/png" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</head>
+	<body>
+		<section class="sub-header">
+			<nav>
+				<a href="index.html"><img src="images/Logo.png" /></a>
+				<div class="nav-links" id="navLinks">
+					<i class="fa fa-times" onclick="hideMenu()"></i>
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="about.html">ABOUT</a></li>
+						<li><a href="course.html">COURSES</a></li>
+						<li><a href="blog.html">BLOG</a></li>
+						<li><a href="contact.html">CONTACT</a></li>
+					</ul>
+				</div>
+				<i class="fa fa-bars" onclick="showMenu()"></i>
+			</nav>
+			<h1>Our Courses</h1>
+		</section>
+
+		<!-- --------Courses-------- -->
+
+		<section class="course">
+			<h1>Courses we offer for Undergraduate Programme</h1>
+			<p>
+				All Undergraduate Programs are affiliated to <br />Institute of
+				engineering and technology DAVV, Indore
+			</p>
+			<table
+				style="text-align: center; width: 100%"
+				border="1"
+				cellpadding="5"
+				cellspacing="5"
+			>
+				<tbody>
+					<tr>
+						<th>Sr. No.</th>
+						<th align="center">Course Name</th>
+						<th align="center">Choice Code as per State CET Cell</th>
+						<th align="center">Sanctioned Intake</th>
+						<th align="center">Starting Year</th>
+					</tr>
+					<tr>
+						<td>1.</td>
+						<td align="left">&nbsp; Electrical Engineering</td>
+						<td align="left">411529310</td>
+						<td>60</td>
+						<td>1984</td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td align="left">&nbsp; Industrial Engineering</td>
+						<td align="left">411558910</td>
+						<td>60</td>
+						<td>1984</td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td align="left">&nbsp; Civil Engineering</td>
+						<td align="left">411519110</td>
+						<td>60</td>
+						<td>1984</td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td align="left">&nbsp; Electronics Engineering</td>
+						<td align="left">411537610</td>
+						<td>120</td>
+						<td>1986</td>
+					</tr>
+
+					<tr>
+						<td>5.</td>
+						<td align="left">
+							&nbsp; Electronics and Communication Engineering
+						</td>
+						<td align="left">411537010</td>
+						<td>120</td>
+						<td>2001</td>
+					</tr>
+					<tr>
+						<td>6.</td>
+						<td align="left">&nbsp; Information Technology</td>
+						<td align="left">411524610</td>
+						<td>60</td>
+						<td>2001</td>
+					</tr>
+					<tr>
+						<td>7.</td>
+						<td align="left">&nbsp; Computer Science and Engineering</td>
+						<td align="left">411524210</td>
+						<td>120</td>
+						<td>2002</td>
+					</tr>
+					<tr>
+						<td>8.</td>
+						<td align="left">&nbsp; Mechanical Engineering</td>
+						<td align="left">411561210</td>
+						<td>60</td>
+						<td>2009</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<!-- ------- Footer -------  -->
+
+		<section class="footer">
+			<h4>About us</h4>
+			<p>
+				IET-Davv is one of the best college with AN ISO certified Institution.
+				NAAC ACCREDITED with 'A+' Grade.
+			</p>
+			<div class="icons">
+				<a class="plain-link" href="#"><i class="fa fa-twitter"></i></a>
+				<a class="plain-link" href="#"><i class="fa fa-facebook"></i></a>
+				<a class="plain-link" href="#"><i class="fa fa-instagram"></i></a>
+				<a class="plain-link" href="#"><i class="fa fa-youtube"></i></a>
+			</div>
+			<p>
+				Made by Mustafa Azad
+				<br />
+				Copyright @ 2024
+				<a
+					class="plain-link icons-blue"
+					href="https://www.linkedin.com/in/mustafaazad03/"
+					><i class="fa fa-linkedin"></i
+				></a>
+				<a class="plain-link icons-blue" href="https://github.com/mustafaazad03"
+					><i class="fa fa-github"></i
+				></a>
+				<a
+					class="plain-link icons-blue"
+					href="https://www.instagram.com/mustafaazad03/"
+					><i class="fa fa-instagram"></i
+				></a>
+				<a class="plain-link icons-blue" href="mailto:mustafaazad533@gmail.com"
+					><i class="fa fa-at"></i
+				></a>
+			</p>
+		</section>
+
+		<!-- -------------JavaScript for toggle menu------------ -->
+		<script>
+			var navLinks = document.getElementById("navLinks");
+			function showMenu() {
+				navLinks.style.right = "0";
+			}
+			function hideMenu() {
+				navLinks.style.right = "-200px";
+			}
+		</script>
+	</body>
+</html>
